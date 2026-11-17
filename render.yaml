@@ -1,7 +1,9 @@
+
 services:
   - type: web
     name: crop-ml-api
     runtime: python
+    plan: free
     rootDir: backend/ml
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app --bind 0.0.0.0:$PORT
@@ -10,6 +12,7 @@ services:
   - type: web
     name: crop-node-api
     runtime: node
+    plan: free
     rootDir: backend
     buildCommand: npm ci
     startCommand: npm start
