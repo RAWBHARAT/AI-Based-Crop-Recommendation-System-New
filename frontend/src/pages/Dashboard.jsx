@@ -93,6 +93,9 @@ useEffect(() => {
 
   loadDashboard();
 }, [token]);
+console.log("DASHBOARD USEEFFECT RUNNING");
+console.log("API URL:", apiUrl("/api/weather?location=Narsinghpur"));
+console.log("TOKEN:", token ? "Token exists" : "Token missing");
      { headers }
     
   const sendMessage = async () => {
